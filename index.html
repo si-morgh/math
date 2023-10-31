@@ -1,38 +1,33 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Two-Column Layout</title>
+    <title>Two Vertical Sections</title>
     <style>
-        /* Apply CSS to create two columns */
-        .container {
-            display: flex;
+        /* Apply CSS for the left and right sections */
+        .left-section {
+            width: 50%;
+            height: 100vh; /* 100% of the viewport height */
+            background-color: #ffcc00; /* Background color for the left section */
+            float: left;
         }
-        .left-column {
-            flex: 1;
-            padding: 0px;
-            border: 0px solid #ccc;
-            background-color: #3B444B; /* Change this to your desired background color for the left column */
-        }
-        .right-column {
-            flex: 1;
-            padding: 0px;
-            border: 0px solid #ccc;
-             background-color: #B2BEB5; /* Change this to your desired background color for the right column */
+        .right-section {
+            width: 50%;
+            height: 100vh;
+            background-color: #ff6600; /* Background color for the right section */
+            float: right;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="left-column">
-            <!-- Content for the left column goes here -->
-            <h2>Left Column</h2>
-            <p>This is the content for the left column.</p>
-        </div>
-        <div class="right-column">
-            <!-- Content for the right column goes here -->
-            <h2>Right Column</h2>
-            <p>This is the content for the right column.</p>
-        </div>
+    <div class="left-section">
+        <!-- Content for the left section goes here -->
+        <h2>Left Section</h2>
+        <p>This is the content for the left section.</p>
+    </div>
+    <div class="right-section">
+        <!-- Content for the right section goes here -->
+        <h2>Right Section</h2>
+        <p>This is the content for the right section.</p>
     </div>
 </body>
 </html>
