@@ -7,22 +7,27 @@
         .container {
             display: flex;
         }
-        .column {
+        .left-column {
             flex: 1;
             padding: 20px;
             border: 1px solid #ccc;
-             background-color: #ffcc00;
+            background-color: #ffcc00; /* Change this to your desired background color for the left column */
+        }
+        .right-column {
+            flex: 1;
+            padding: 20px;
+            border: 1px solid #ccc;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="column">
+        <div class="left-column">
             <!-- Content for the left column goes here -->
             <h2>Left Column</h2>
             <p>This is the content for the left column.</p>
         </div>
-        <div class="column">
+        <div class="right-column">
             <!-- Content for the right column goes here -->
             <h2>Right Column</h2>
             <p>This is the content for the right column.</p>
@@ -30,4 +35,3 @@
     </div>
 </body>
 </html>
-
