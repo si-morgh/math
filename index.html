@@ -49,4 +49,49 @@
             background-color: #004080;
         }
 
-        .fl
+        .floating-triangle {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 240px; /* Updated size */
+            height: 208px; /* Updated size */
+            background-color: #ff8c00; /* Updated color */
+            cursor: pointer;
+            overflow: hidden; /* Hide overflowing content */
+        }
+
+        .floating-triangle::before {
+            content: 'Mathematics'; /* Updated content */
+            display: block;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 24px;
+            color: #fff;
+        }
+
+        .floating-triangle p {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 24px;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to My Website!</h1>
+    
+    <p>Explore the different sections below:</p>
+    
+    <ul>
+        <li><a href="partA.html">Part A</a></li>
+        <li><a href="partB.html">Part B</a></li>
+    </ul>
+
+    <div class="floating-triangle"></div>
+</body>
+</html>
