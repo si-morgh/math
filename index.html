@@ -7,12 +7,13 @@
     <style>
         body {
             font-family: 'Arial', sans-serif;
-            background-color: #3B444B; /* Updated background color */
-            color: #fff; /* Updated text color to white */
+            background-color: #3B444B;
+            color: #fff;
             margin: 0;
             padding: 0;
             text-align: center;
             position: relative;
+            overflow: hidden;
         }
 
         h1 {
@@ -51,14 +52,33 @@
         .floating-triangle {
             position: absolute;
             top: 50%;
-            right: 5%;
-            transform: translateY(-50%);
+            left: 50%;
+            transform: translate(-50%, -50%);
             width: 0;
             height: 0;
-            border-left: 30px solid transparent;
-            border-right: 30px solid transparent;
-            border-bottom: 52px solid #fff;
+            border-left: 60px solid transparent;
+            border-right: 60px solid transparent;
+            border-bottom: 104px solid #fff;
             cursor: pointer;
+            animation: moveTriangle 5s infinite linear;
+        }
+
+        @keyframes moveTriangle {
+            0% {
+                transform: translate(-50%, -50%) translate(0, 0);
+            }
+            25% {
+                transform: translate(-50%, -50%) translate(100px, 50px);
+            }
+            50% {
+                transform: translate(-50%, -50%) translate(200px, 0);
+            }
+            75% {
+                transform: translate(-50%, -50%) translate(100px, -50px);
+            }
+            100% {
+                transform: translate(-50%, -50%) translate(0, 0);
+            }
         }
     </style>
 </head>
@@ -72,6 +92,6 @@
         <li><a href="partB.html">Part B</a></li>
     </ul>
 
-    <div class="floating-triangle" onclick="window.location.href='partA.html'"></div>
+    <div class="floating-triangle"></div>
 </body>
 </html>
