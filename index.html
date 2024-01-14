@@ -54,31 +54,42 @@
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            width: 240px; /* Updated size */
-            height: 208px; /* Updated size */
-            background-color: #ff8c00; /* Updated color */
+            width: 0;
+            height: 0;
+            border-left: 120px solid transparent;
+            border-right: 120px solid transparent;
+            border-bottom: 208px solid #ff8c00;
             cursor: pointer;
-            overflow: hidden; /* Hide overflowing content */
+            animation: moveTriangle 5s infinite linear;
         }
 
         .floating-triangle::before {
-            content: 'Mathematics'; /* Updated content */
-            display: block;
+            content: ' '; /* Empty content for the pseudo-element */
             position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            font-size: 24px;
-            color: #fff;
+            top: 20px; /* Adjust the position based on your design */
+            left: 20px; /* Adjust the position based on your design */
+            width: 80px; /* Adjust the size based on your design */
+            height: 80px; /* Adjust the size based on your design */
+            background-color: #3B444B; /* Match the background color of the body */
+            z-index: -1; /* Move the pseudo-element behind the triangle */
         }
 
-        .floating-triangle p {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            font-size: 24px;
-            color: #fff;
+        @keyframes moveTriangle {
+            0% {
+                transform: translate(-50%, -50%) translate(0, 0);
+            }
+            25% {
+                transform: translate(-50%, -50%) translate(100px, 50px);
+            }
+            50% {
+                transform: translate(-50%, -50%) translate(200px, 0);
+            }
+            75% {
+                transform: translate(-50%, -50%) translate(100px, -50px);
+            }
+            100% {
+                transform: translate(-50%, -50%) translate(0, 0);
+            }
         }
     </style>
 </head>
