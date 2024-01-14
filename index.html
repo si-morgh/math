@@ -7,11 +7,12 @@
     <style>
         body {
             font-family: 'Arial', sans-serif;
-            background-color: #3B444B;
-            color: #333;
+            background-color: #3B444B; /* Updated background color */
+            color: #fff; /* Updated text color to white */
             margin: 0;
             padding: 0;
             text-align: center;
+            position: relative;
         }
 
         h1 {
@@ -40,10 +41,24 @@
             color: #fff;
             border-radius: 5px;
             transition: background-color 0.3s;
+            display: inline-block;
         }
 
         a:hover {
             background-color: #004080;
+        }
+
+        .floating-triangle {
+            position: absolute;
+            top: 50%;
+            right: 5%;
+            transform: translateY(-50%);
+            width: 0;
+            height: 0;
+            border-left: 30px solid transparent;
+            border-right: 30px solid transparent;
+            border-bottom: 52px solid #fff;
+            cursor: pointer;
         }
     </style>
 </head>
@@ -56,5 +71,7 @@
         <li><a href="partA.html">Part A</a></li>
         <li><a href="partB.html">Part B</a></li>
     </ul>
+
+    <div class="floating-triangle" onclick="window.location.href='partA.html'"></div>
 </body>
 </html>
